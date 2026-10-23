@@ -1,0 +1,9 @@
+{
+  "appId": "com.dinklytics.pokernight",
+  "appName": "Poker Night",
+  "webDir": "public",
+  "ios": {
+    "contentInset": "always",
+    "preferredContentMode": "mobile"
+  }
+}

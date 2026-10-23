@@ -1,0 +1,678 @@
+{
+  "topics": {
+    "earnings": {
+      "path": "data/earnings.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:bonds-cash": {
+      "path": "data/group/bonds-cash.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:broad": {
+      "path": "data/group/broad.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:international": {
+      "path": "data/group/international.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:real-assets": {
+      "path": "data/group/real-assets.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:sectors": {
+      "path": "data/group/sectors.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:stocks": {
+      "path": "data/group/stocks.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:style": {
+      "path": "data/group/style.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "group:thematic": {
+      "path": "data/group/thematic.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:AAPL": {
+      "path": "data/holding/AAPL.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:ADBE": {
+      "path": "data/holding/ADBE.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:AIQ": {
+      "path": "data/holding/AIQ.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:AMAT": {
+      "path": "data/holding/AMAT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:AMD": {
+      "path": "data/holding/AMD.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:AMZN": {
+      "path": "data/holding/AMZN.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:ARKK": {
+      "path": "data/holding/ARKK.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:ASML": {
+      "path": "data/holding/ASML.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:AVGO": {
+      "path": "data/holding/AVGO.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:BIL": {
+      "path": "data/holding/BIL.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:BND": {
+      "path": "data/holding/BND.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:BOTZ": {
+      "path": "data/holding/BOTZ.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:CIBR": {
+      "path": "data/holding/CIBR.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:COST": {
+      "path": "data/holding/COST.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:CRM": {
+      "path": "data/holding/CRM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:CRWD": {
+      "path": "data/holding/CRWD.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:DBC": {
+      "path": "data/holding/DBC.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:DGRO": {
+      "path": "data/holding/DGRO.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:DIA": {
+      "path": "data/holding/DIA.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:DIS": {
+      "path": "data/holding/DIS.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:DRIV": {
+      "path": "data/holding/DRIV.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:EFA": {
+      "path": "data/holding/EFA.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:FDN": {
+      "path": "data/holding/FDN.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:GLD": {
+      "path": "data/holding/GLD.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:GOOGL": {
+      "path": "data/holding/GOOGL.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:HD": {
+      "path": "data/holding/HD.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:IBB": {
+      "path": "data/holding/IBB.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:ICLN": {
+      "path": "data/holding/ICLN.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:IEMG": {
+      "path": "data/holding/IEMG.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:IWM": {
+      "path": "data/holding/IWM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:IXUS": {
+      "path": "data/holding/IXUS.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:JPM": {
+      "path": "data/holding/JPM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:LIT": {
+      "path": "data/holding/LIT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:LLY": {
+      "path": "data/holding/LLY.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:LQD": {
+      "path": "data/holding/LQD.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:MA": {
+      "path": "data/holding/MA.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:META": {
+      "path": "data/holding/META.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:MRVL": {
+      "path": "data/holding/MRVL.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:MSFT or GOOGL": {
+      "path": "data/holding/MSFT-OR-GOOGL.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:MU": {
+      "path": "data/holding/MU.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:NFLX": {
+      "path": "data/holding/NFLX.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:NVDA": {
+      "path": "data/holding/NVDA.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:ORCL": {
+      "path": "data/holding/ORCL.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:PANW": {
+      "path": "data/holding/PANW.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:PLTR": {
+      "path": "data/holding/PLTR.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:QCOM": {
+      "path": "data/holding/QCOM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:QQQ": {
+      "path": "data/holding/QQQ.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:QTUM": {
+      "path": "data/holding/QTUM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:Quantum Basket": {
+      "path": "data/holding/QUANTUM-BASKET.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:ROBO": {
+      "path": "data/holding/ROBO.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:RSP": {
+      "path": "data/holding/RSP.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SCHD": {
+      "path": "data/holding/SCHD.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SCHF": {
+      "path": "data/holding/SCHF.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SCHH": {
+      "path": "data/holding/SCHH.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SCHP": {
+      "path": "data/holding/SCHP.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SGOV": {
+      "path": "data/holding/SGOV.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SHOP": {
+      "path": "data/holding/SHOP.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SHV": {
+      "path": "data/holding/SHV.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SKYY": {
+      "path": "data/holding/SKYY.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SMH": {
+      "path": "data/holding/SMH.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:SNOW": {
+      "path": "data/holding/SNOW.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:TLT": {
+      "path": "data/holding/TLT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:TSLA": {
+      "path": "data/holding/TSLA.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:TSM": {
+      "path": "data/holding/TSM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:UBER": {
+      "path": "data/holding/UBER.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:UNH": {
+      "path": "data/holding/UNH.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:V": {
+      "path": "data/holding/V.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VB": {
+      "path": "data/holding/VB.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VCIT": {
+      "path": "data/holding/VCIT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VEA": {
+      "path": "data/holding/VEA.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VGIT": {
+      "path": "data/holding/VGIT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VGLT": {
+      "path": "data/holding/VGLT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VGSH": {
+      "path": "data/holding/VGSH.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VGT": {
+      "path": "data/holding/VGT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VIG": {
+      "path": "data/holding/VIG.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VNQ": {
+      "path": "data/holding/VNQ.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VO": {
+      "path": "data/holding/VO.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VOO": {
+      "path": "data/holding/VOO.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VRT or APH": {
+      "path": "data/holding/VRT-OR-APH.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VSS": {
+      "path": "data/holding/VSS.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VT": {
+      "path": "data/holding/VT.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VTEB": {
+      "path": "data/holding/VTEB.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VTI": {
+      "path": "data/holding/VTI.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VTV": {
+      "path": "data/holding/VTV.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VUG": {
+      "path": "data/holding/VUG.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VWO": {
+      "path": "data/holding/VWO.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VXF": {
+      "path": "data/holding/VXF.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VXUS": {
+      "path": "data/holding/VXUS.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:VYM": {
+      "path": "data/holding/VYM.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XBI": {
+      "path": "data/holding/XBI.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLB": {
+      "path": "data/holding/XLB.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLC": {
+      "path": "data/holding/XLC.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLE": {
+      "path": "data/holding/XLE.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLF": {
+      "path": "data/holding/XLF.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLI": {
+      "path": "data/holding/XLI.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLK": {
+      "path": "data/holding/XLK.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLP": {
+      "path": "data/holding/XLP.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLU": {
+      "path": "data/holding/XLU.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLV": {
+      "path": "data/holding/XLV.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "holding:XLY": {
+      "path": "data/holding/XLY.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "models": {
+      "path": "data/models.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "research": {
+      "path": "data/research.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    },
+    "scorecard": {
+      "path": "data/scorecard.json",
+      "producer": "split_topics.py",
+      "status": "ok",
+      "updatedET": "Oct 22, 2026 — 5:44 PM ET"
+    }
+  },
+  "updatedET": "Oct 22, 2026 — 5:44 PM ET",
+  "version": "1.0"
+}

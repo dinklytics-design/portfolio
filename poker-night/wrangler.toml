@@ -1,0 +1,15 @@
+# Poker Night buy-in tracker — standalone prototype worker.
+name = "poker-tracker"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./public"
+not_found_handling = "single-page-application"
+
+# D1 database for shared live tables. database_id is injected by CI
+# (deploy.yml provisions it if missing); local dev uses --local D1.
+[[d1_databases]]
+binding = "DB"
+database_name = "poker-games"
+database_id = "00000000-0000-0000-0000-000000000000"

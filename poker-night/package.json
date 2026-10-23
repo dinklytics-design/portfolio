@@ -1,0 +1,1 @@
+{"dependencies":{"@capacitor/core":"^7.0.0","@capacitor/ios":"^7.0.0"},"description":"Poker Night buy-in tracker — Cloudflare Worker prototype","devDependencies":{"@capacitor/cli":"^7.0.0"},"name":"poker-tracker","private":true,"scripts":{"cap:open":"cap open ios","cap:sync":"cap sync ios"},"version":"1.0.0"}

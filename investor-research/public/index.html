@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a1b31">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Don't Waste Your Money">
+<title>Don't Waste Your Money — Build My Investment Plan</title>
+<meta name="description" content="Don't Waste Your Money — Tell us how much, how much risk, and when you need it. We show you a plan. Educational research only — not personalized financial advice.">
+<meta property="og:title" content="Don't Waste Your Money — Build My Investment Plan">
+<meta property="og:description" content="Tell us how much, how much risk, and when you need it. We show you a plan. Educational research only — not personalized financial advice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://emerging-tech-research.dinklytics.workers.dev/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Don't Waste Your Money — Build My Investment Plan">
+<meta name="twitter:description" content="Educational research only. Tell us how much, how much risk, and when you need it. We show you a plan.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="logo.svg">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Don't Waste Your Money","description":"Educational investment research only. Tell us how much, how much risk, and when you need it. We show you a plan. Not personalized financial advice.","url":"https://emerging-tech-research.dinklytics.workers.dev/"}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#calculator">Skip to calculator</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Don't Waste Your Money home">
+      <img class="brand-logo" src="logo.svg" alt="Don't Waste Your Money logo" width="40" height="40">
+      <span class="brand-text"><strong>Don't Waste Your Money</strong><small>Transparent · Evidence-led</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation">Menu</button>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <a href="#calculator">Build My Plan</a>
+      <a href="#plan">Your Plan</a>
+      <a href="#/holdings">Holdings Explorer</a>
+      <a href="#/groups">Groups</a>
+      <a href="#/earnings">Earnings</a>
+      <a href="#/deepdives">Deep Dives</a>
+      <button type="button" class="nav-search" id="paletteBtn" aria-label="Search holdings, groups, and pages">Search <span class="kbd" aria-hidden="true">⌘K</span></button>
+      <a href="#how-we-research">How We Research</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#disclaimer">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker-strip" aria-label="Market symbols — no live prices on this site">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Public Investment Research · Educational Only</p>
+        <h1>Don't waste your money.</h1>
+        <p class="lede">Tell us how much, how much risk, and when you need it. We'll show you a plan.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#calculator">Build My Investment Plan</a>
+          <a class="btn text" href="#/holdings">Explore all holdings →</a>
+          <a class="btn text" href="#disclaimer">Read disclaimer →</a>
+        </div>
+        <p class="hero-foot">Educational research only. Not personalized advice. Past performance does not guarantee future results.</p>
+      </div>
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="What this site does">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack">
+            <figure class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <img src="img/carousel-model.jpg" alt="Illustration of a plan builder showing where money goes" width="1200" height="800" fetchpriority="high">
+              <figcaption><strong>Build your plan</strong><span>Set your amount, risk, and timeline — we show you a plan.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <img src="img/carousel-research.jpg" alt="Illustration of fresh daily research" width="1200" height="800" loading="lazy">
+              <figcaption><strong>Fresh research</strong><span>Our research updates twice a day, so your plan reflects what's happening now.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <img src="img/carousel-groups.jpg" alt="Illustration of a diversified mix across many groups" width="1200" height="800" loading="lazy">
+              <figcaption><strong>Your full mix</strong><span>Broad market · Bonds · International · Sectors · Themes · Individual stocks — spread out, not all in one place.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous slide">&#8249;</button>
+        <button type="button" class="carousel-arrow carousel-next" aria-label="Next slide">&#8250;</button>
+        <div class="carousel-dots" role="tablist" aria-label="Choose slide">
+          <button type="button" role="tab" aria-label="Slide 1: Build your plan" aria-selected="true" data-carousel-dot="0"></button>
+          <button type="button" role="tab" aria-label="Slide 2: Fresh research" aria-selected="false" data-carousel-dot="1"></button>
+          <button type="button" role="tab" aria-label="Slide 3: Your full mix" aria-selected="false" data-carousel-dot="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research-widgets" class="section alt">
+    <div class="container">
+      <p class="eyebrow">Research at a glance</p>
+      <h2>Research at a glance</h2>
+      <p class="section-lede">The latest research, in small pieces — each one shows when it was last updated, and each one stands on its own.</p>
+      <div class="widget-grid" id="widgetGrid"></div>
+    </div>
+  </section>
+
+  <section id="calculator" class="section calculator-section">
+    <div class="container">
+      <p class="eyebrow">Build My Investment Plan</p>
+      <h2>Build My Investment Plan</h2>
+      <p class="section-lede">Answer three questions, then press the button. Your plan appears below.</p>
+      <div id="timelineWarning" class="warning-banner" hidden role="alert"><strong>Short-timeline warning:</strong> Growth investing is not suitable for money needed in under a year — consider not investing this money in this plan.</div>
+      <div class="calculator-grid">
+        <div class="calc-controls">
+          <div class="calc-field">
+            <label for="amountInput"><strong>How much?</strong> <span id="amountDisplay" class="amount-display">$500</span></label>
+            <input type="number" id="amountInput" min="500" max="500000" step="100" value="500" inputmode="numeric" aria-describedby="amountHelp">
+            <input type="range" id="amountSlider" min="500" max="500000" step="500" value="500" aria-label="Investment amount slider">
+            <p id="amountHelp" class="field-help">$500 – $500,000. Type an amount or drag the slider.</p>
+            <div class="presets" role="group" aria-label="Amount presets">
+              <button type="button" data-preset="500">$500</button>
+              <button type="button" data-preset="5000">$5k</button>
+              <button type="button" data-preset="10000">$10k</button>
+              <button type="button" data-preset="25000">$25k</button>
+              <button type="button" data-preset="50000">$50k</button>
+              <button type="button" data-preset="100000">$100k</button>
+            </div>
+          </div>
+          <fieldset class="calc-field">
+            <legend><strong>How much risk?</strong></legend>
+            <div class="segmented" role="radiogroup" aria-label="How much risk">
+              <button type="button" role="radio" data-risk-btn="conservative" aria-checked="false">Conservative</button>
+              <button type="button" role="radio" data-risk-btn="moderate" aria-checked="false">Moderate</button>
+              <button type="button" role="radio" data-risk-btn="aggressive" aria-checked="true" class="selected">Aggressive</button>
+              <button type="button" role="radio" data-risk-btn="veryaggressive" aria-checked="false">Very Aggressive</button>
+            </div>
+            <p id="riskDesc" class="field-help">Risk = how far your plan could drop.</p>
+            <ul class="risk-legend">
+              <li><strong>Conservative:</strong> Lower swings, more stability. Still can fall sharply.</li>
+              <li><strong>Moderate:</strong> Balanced growth with some cushion.</li>
+              <li><strong>Aggressive:</strong> Full growth tilt, large swings expected.</li>
+              <li><strong>Very Aggressive:</strong> Maximum volatility. Only money you can leave alone.</li>
+            </ul>
+          </fieldset>
+          <fieldset class="calc-field">
+            <legend><strong>When do you need it?</strong></legend>
+            <div class="segmented" role="radiogroup" aria-label="When do you need it">
+              <button type="button" role="radio" data-timeline-btn="under-1" aria-checked="false">&lt;1 yr</button>
+              <button type="button" role="radio" data-timeline-btn="1-3" aria-checked="false">1–3 yr</button>
+              <button type="button" role="radio" data-timeline-btn="3-5" aria-checked="true" class="selected">3–5 yr</button>
+              <button type="button" role="radio" data-timeline-btn="5-plus" aria-checked="false">5+ yr</button>
+            </div>
+            <p class="field-help">When might you need this money? Longer timelines handle ups and downs better.</p>
+          </fieldset>
+          <fieldset class="calc-field">
+            <legend><strong>Account type</strong></legend>
+            <div class="segmented" role="radiogroup" aria-label="Account type">
+              <button type="button" role="radio" data-account-btn="taxable" aria-checked="true" class="selected">Taxable</button>
+              <button type="button" role="radio" data-account-btn="roth" aria-checked="false">Roth IRA</button>
+              <button type="button" role="radio" data-account-btn="traditional" aria-checked="false">Traditional IRA</button>
+            </div>
+            <p class="field-help">Account type changes the tax note only — it does not change your plan.</p>
+          </fieldset>
+          <div class="calc-actions">
+            <button type="button" class="btn primary build-btn" id="buildBtn">Build My Investment Plan</button>
+            <button type="button" class="btn ghost" id="resetBtn">Start over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="plan" class="section">
+    <div class="container">
+      <p class="eyebrow">Your Plan</p>
+      <h2 id="portfolioHeading">Your investment plan</h2>
+      <p class="section-lede" id="researchLine">Research updated Oct 17, 2026.</p>
+      <p class="view-stamp" id="planStamp" hidden></p>
+      <div id="planPlaceholder" class="plan-placeholder">
+        <p>Your plan will appear here.</p>
+        <p>Set your amount, risk, and timeline above, then press <strong>Build My Investment Plan</strong>.</p>
+      </div>
+      <p id="loadError" class="warning-banner" hidden role="alert"><strong>We couldn't load the research.</strong> Refresh the page to try again.</p>
+      <p id="rebuildNotice" class="rebuild-notice" hidden role="status">Your inputs changed — <button type="button" class="link-btn" id="rebuildBtn">Rebuild my plan</button> to update your plan.</p>
+      <div id="planContent" hidden aria-live="polite">
+        <p class="why-line" id="whyLine"></p>
+        <div class="calc-output" id="calcOutput">
+          <h3>What your money goes into</h3>
+          <p class="field-help">Core = broad-market funds, the steady base &middot; Enablers = big established tech companies &middot; Satellite = small, high-risk side bets &middot; Defensive = bonds &middot; Cash = cash on hand</p>
+          <div class="bucket-bars" id="bucketBars"></div>
+          <h3>Group mix</h3>
+          <div class="bucket-bars" id="groupBars"></div>
+          <div class="risk-summary" id="riskSummary"></div>
+          <p class="tax-note"><strong>Tax note:</strong> <span id="taxNote"></span></p>
+          <p class="calc-disclaimer"><strong>Illustrative model — not a recommendation for you. Consult a qualified advisor.</strong> <a href="#disclaimer">Read the full disclaimer.</a></p>
+        </div>
+        <div class="controls" role="group" aria-label="Filter your plan">
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="core" aria-pressed="false">Core</button>
+            <button class="filter-btn" data-filter="enabler" aria-pressed="false">Enablers</button>
+            <button class="filter-btn" data-filter="satellite" aria-pressed="false">Satellite</button>
+            <button class="filter-btn" data-filter="defensive" aria-pressed="false">Defensive</button>
+            <button class="filter-btn" data-filter="cash" aria-pressed="false">Cash</button>
+          </div>
+          <label class="search-label">Search <input type="search" id="searchInput" placeholder="Search your plan — NVDA, VOO…" aria-label="Search your plan"></label>
+        </div>
+        <p class="field-help">Press Enter to open the first match. Click any row to open its full note.</p>
+        <p class="table-scroll-hint" aria-hidden="true">Scroll sideways → to see all columns</p>
+        <div class="table-wrap">
+        <table class="portfolio-table" id="portfolioTable">
+          <thead><tr><th scope="col">Stock symbol</th><th scope="col">Kind</th><th scope="col">Amount ($)</th><th scope="col">%</th><th scope="col">Yearly fee</th><th scope="col">Why we like it</th><th scope="col">Biggest risk</th><th scope="col">What to watch</th><th scope="col">Next earnings</th></tr></thead>
+          <tbody id="portfolioBody"></tbody>
+        </table>
+        </div>
+        <p class="table-note" id="tableNote"></p>
+        <p class="no-results" id="noResults" hidden>No investments match — <button type="button" id="clearPlanFilters" class="link-btn">clear filters</button> to see everything again.</p>
+        <div class="calc-actions">
+          <button type="button" class="btn primary" id="copyBtn">Copy plan</button>
+          <button type="button" class="btn secondary" id="printBtn">Print plan</button>
+        </div>
+        <p class="calc-disclaimer"><strong>Illustrative model — not a recommendation for you. Consult a qualified advisor.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="holdingsView" class="section" hidden>
+    <div class="container">
+      <p class="eyebrow">Holdings Explorer</p>
+      <h2>Explore all the holdings</h2>
+      <p class="section-lede">Look through everything we research — filter by group, by how the research stands, or by kind, or search by name. Research only: this page never shows prices.</p>
+      <p class="view-stamp" id="explorerStamp"></p>
+      <div class="controls explorer-controls" role="group" aria-label="Filter the holdings">
+        <label class="search-label">Group
+          <select id="expGroup" aria-label="Filter by group"><option value="all">All groups</option></select>
+        </label>
+        <label class="search-label">Research stands
+          <select id="expStatus" aria-label="Filter by research status">
+            <option value="all">Any standing</option>
+            <option value="holds">On track</option>
+            <option value="watch">To watch</option>
+            <option value="break">Changed our mind</option>
+          </select>
+        </label>
+        <label class="search-label">Kind
+          <select id="expType" aria-label="Filter by kind">
+            <option value="all">Stocks and funds</option>
+            <option value="stock">Stocks only</option>
+            <option value="etf">Funds only (ETF)</option>
+          </select>
+        </label>
+        <label class="search-label">Sort by
+          <select id="expSort" aria-label="Sort the holdings">
+            <option value="name">Name</option>
+            <option value="ticker">Stock symbol</option>
+            <option value="status">Research standing</option>
+          </select>
+        </label>
+        <label class="search-label">Search <input type="search" id="expSearch" placeholder="Search — NVDA, bonds…" aria-label="Search the holdings"></label>
+      </div>
+      <p class="field-help" id="explorerCount" role="status"></p>
+      <div class="widget-card explorer-detail" id="explorerDetail" hidden></div>
+      <p class="table-scroll-hint" aria-hidden="true">Scroll sideways → to see all columns</p>
+      <div class="table-wrap">
+        <table class="portfolio-table explorer-table" id="explorerTable">
+          <thead><tr><th scope="col">Stock symbol</th><th scope="col">Name</th><th scope="col">Kind</th><th scope="col">Group</th><th scope="col">Research stands</th><th scope="col">Latest note</th></tr></thead>
+          <tbody id="explorerBody"></tbody>
+        </table>
+      </div>
+      <p class="no-results" id="explorerEmpty" hidden>No holdings match — clear a filter or the search to see everything again.</p>
+      <p class="warning-banner" id="explorerError" hidden role="alert"><strong>Research data isn't available right now</strong> — please check back shortly.</p>
+      <p class="table-note">Click any row to open its full research note. Educational research only — not personalized financial advice.</p>
+    </div>
+  </section>
+
+  <section id="groupsView" class="section" hidden>
+    <div class="container">
+      <p class="eyebrow">Groups</p>
+      <h2>The groups behind every plan</h2>
+      <p class="section-lede">Every holding sits in one group. Here is what each group is for, how many holdings it has, and how its research stands. Pick a group to see its holdings.</p>
+      <p class="view-stamp" id="groupsStamp"></p>
+      <div class="widget-grid" id="groupsGrid"></div>
+      <p class="warning-banner" id="groupsError" hidden role="alert"><strong>Research data isn't available right now</strong> — please check back shortly.</p>
+    </div>
+  </section>
+
+  <section id="earningsView" class="section" hidden>
+    <div class="container">
+      <p class="eyebrow">Earnings</p>
+      <h2>Earnings ahead</h2>
+      <p class="section-lede">The upcoming earnings dates we can date-check, soonest first. Research only — dates can move, so confirm on the company's own calendar before acting.</p>
+      <p class="view-stamp" id="earningsStamp"></p>
+      <div class="card widget-card" id="earningsList"></div>
+      <p class="warning-banner" id="earningsError" hidden role="alert"><strong>Research data isn't available right now</strong> — please check back shortly.</p>
+    </div>
+  </section>
+
+  <section id="deepdivesView" class="section" hidden>
+    <div class="container">
+      <p class="eyebrow">Deep Dives</p>
+      <h2>Deep-dive rounds</h2>
+      <p class="section-lede">Twice a week we take a small set of holdings apart in depth. Here is the latest round and the rounds before it.</p>
+      <p class="view-stamp" id="deepdivesStamp"></p>
+      <div class="details" id="deepdivesContent"></div>
+      <p class="warning-banner" id="deepdivesError" hidden role="alert"><strong>Research data isn't available right now</strong> — please check back shortly.</p>
+    </div>
+  </section>
+
+  <section id="how-we-research" class="section">
+    <div class="container">
+      <p class="eyebrow">How we research</p>
+      <h2>How we pick what's in your plan</h2>
+      <p class="section-lede">Every pick in your plan is checked from several angles before it makes the cut.</p>
+      <ul class="research-list">
+        <li><strong>Value</strong> — Is it priced fairly for what it earns?</li>
+        <li><strong>Growth</strong> — Is the market it serves growing?</li>
+        <li><strong>Numbers</strong> — What does the data show about momentum and how much it swings?</li>
+        <li><strong>Risk</strong> — What could go wrong? Debt, regulation, and fragile supply chains can flag or remove a pick.</li>
+        <li><strong>Scenarios</strong> — We look at what happens if things go badly, as expected, or really well.</li>
+        <li><strong>Freshness</strong> — Research updates twice a day from company filings, earnings, and headlines.</li>
+        <li><strong>Honesty</strong> — No paid data, no copied articles, no guarantees. Educational research only — not personal advice.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section alt">
+    <div class="container">
+      <p class="eyebrow">How It Works</p>
+      <h2>How it works</h2>
+      <ol class="how-steps">
+        <li><strong>Tell us your amount, risk, and timeline</strong> — three questions, no account, no email.</li>
+        <li><strong>We show you a plan</strong> — what to hold, how much, and why, with the biggest risk for each pick.</li>
+        <li><strong>You decide</strong> — this is research, not a recommendation. Talk to a qualified advisor before you invest.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="disclaimer" class="section disclaimer">
+    <div class="container">
+      <p class="eyebrow">Disclaimer</p>
+      <h2>Educational research only</h2>
+      <p><strong>This site is educational research only. It is not personalized financial advice. We are not licensed financial advisors.</strong> Nothing here is a recommendation to buy or sell any security. All picks are illustrative research models, not instructions for your situation. Calculator output is an illustrative model — not a recommendation for you. Consult a qualified advisor.</p>
+      <p>Investing involves risk, including loss of principal. Aggressive growth stocks can drop 30–50% or more in a year. Past performance does not guarantee future results. Prices, earnings dates, and market levels change — verify all data before acting. Yearly fees and earnings dates marked "Verify" are not confirmed — check the fund provider's page or the company's investor-relations calendar before acting.</p>
+      <p>Do your own research and consult a qualified financial professional who knows your goals, timeline, taxes, and risk tolerance before making investment decisions. No promises of returns are made on this site.</p>
+      <p class="small">Site: Don't Waste Your Money · Content as-of Oct 17, 2026 unless noted. All copy on this site is original. No live price feed.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><img class="footer-logo" src="logo.svg" alt="" width="28" height="28" aria-hidden="true"><strong>Don't Waste Your Money</strong></div>
+    <p>Transparent, evidence-led research. Educational only.</p>
+    <nav aria-label="Footer"><a href="#calculator">Build My Plan</a> · <a href="#plan">Your Plan</a> · <a href="#/holdings">Holdings Explorer</a> · <a href="#/groups">Groups</a> · <a href="#/earnings">Earnings</a> · <a href="#/deepdives">Deep Dives</a> · <a href="#how-we-research">How We Research</a> · <a href="#how-it-works">How It Works</a> · <a href="#disclaimer">Disclaimer</a></nav>
+    <p class="small">© 2026 Don't Waste Your Money. Educational research only — not personalized financial advice. Not a licensed advisor. Past performance does not guarantee future results.</p>
+  </div>
+</footer>
+
+<!-- Command palette (⌘K / Ctrl+K or the Search button) -->
+<div class="palette-backdrop" id="paletteBackdrop" hidden></div>
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Search holdings, groups, and pages" hidden>
+  <div class="palette-box">
+    <input type="search" id="paletteInput" placeholder="Search holdings, groups, and pages…" aria-label="Search holdings, groups, and pages" autocomplete="off">
+    <ul class="palette-results" id="paletteResults" role="listbox" aria-label="Search results"></ul>
+    <p class="sheet-note">↑ ↓ to move · Enter to open · Esc to close</p>
+  </div>
+</div>
+
+<!-- Security detail dialog (opened from plan rows or search Enter) -->
+<div class="sheet-backdrop" id="secBackdrop" hidden></div>
+<div class="sec-dialog" id="secDialog" role="dialog" aria-modal="true" aria-labelledby="secDialogTitle" hidden>
+  <div class="sheet-head">
+    <h3 id="secDialogTitle">Security detail</h3>
+    <button type="button" class="sheet-close" id="secDialogClose" aria-label="Close security detail">Done</button>
+  </div>
+  <div class="sec-dialog-body" id="secDialogBody"></div>
+  <p class="sheet-note">Educational research only — not personalized financial advice.</p>
+</div>
+
+<!-- Mobile bottom tab bar (shown ≤768px by styles.css; desktop nav covers wider screens) -->
+<nav class="tab-bar" aria-label="Mobile">
+  <a class="tab-item" href="#calculator" data-tab="build">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" y1="7" x2="20" y2="7"/><circle cx="9" cy="7" r="2.2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2.2"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="7" cy="17" r="2.2"/></svg>
+    <span>Build</span>
+  </a>
+  <a class="tab-item" href="#plan" data-tab="plan">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+    <span>Plan</span>
+  </a>
+  <a class="tab-item" href="#/holdings" data-tab="explore">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+    <span>Explore</span>
+  </a>
+  <a class="tab-item" href="#/groups" data-tab="groups">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+    <span>Groups</span>
+  </a>
+  <button type="button" class="tab-item" id="mobilePaletteBtn" aria-label="Search holdings, groups, and pages">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    <span>Search</span>
+  </button>
+</nav>
+
+<script src="app.js" defer></script>
+</body>
+</html>

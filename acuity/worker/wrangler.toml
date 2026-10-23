@@ -1,0 +1,78 @@
+# Acuity — one Worker serving the Vite SPA (static assets) + the Hono API at /api/*
+# Async AI model: the Worker creates jobs in D1; a Hatch hook polls for pending
+# jobs and wakes the agent worker, which generates output and POSTs it back.
+# No external LLM provider, no API keys.
+name = "acuity"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "../client/dist"
+not_found_handling = "single-page-application"
+# API routes always hit the Worker first, never the SPA fallback
+run_worker_first = ["/api/*"]
+
+# Async job queue. DEPLOY STEP: run `wrangler d1 create acuity_jobs` once,
+# then paste the returned database_id below (replacing the placeholder).
+[[d1_databases]]
+binding = "DB"
+database_name = "acuity_jobs"
+database_id = "REPLACE_WITH_WRANGLER_D1_CREATE_OUTPUT"
+
+# Workers AI binding — chat jobs are answered in-worker in seconds
+# (Llama 3.3 70B). Falls back to the Hatch agent queue if unavailable.
+[ai]
+binding = "AI"
+
+# DEPLOY STEP: set the hook shared secret — `wrangler secret put HOOK_TOKEN`.
+# The Hatch hook/agent sends it as header `x-acuity-hook-token`.
+
+# Dev and prod environments. CI deploys dev on every push to main;
+# prod only on manual workflow_dispatch with environment=prod.
+[env.dev]
+name = "acuity-dev"
+[env.dev.ai]
+binding = "AI"
+[[env.dev.d1_databases]]
+binding = "DB"
+database_name = "acuity_jobs_dev"
+database_id = "YOUR_D1_DATABASE_ID"
+[[env.dev.queues.producers]]
+binding = "PLAN_QUEUE"
+queue = "acuity-plan-sections-dev"
+[[env.dev.queues.consumers]]
+queue = "acuity-plan-sections-dev"
+max_batch_size = 5
+max_retries = 3
+[env.dev.vars]
+PLAN_QUEUE_MODE = "1"
+
+[env.prod]
+name = "acuity-prod"
+[env.prod.ai]
+binding = "AI"
+[[env.prod.d1_databases]]
+binding = "DB"
+database_name = "acuity_jobs_prod"
+database_id = "REPLACE_WITH_PROD_D1_ID"
+
+# Prototype environment: queue-driven plan generation via Workers AI.
+# Deploys from prototype/** branches (see .github/workflows/deploy.yml).
+# Uses its own D1 + queue so dev/prod are never touched.
+[env.proto]
+name = "acuity-proto"
+[env.proto.ai]
+binding = "AI"
+[[env.proto.d1_databases]]
+binding = "DB"
+database_name = "acuity_jobs_proto"
+database_id = "YOUR_D1_DATABASE_ID"
+[[env.proto.queues.producers]]
+binding = "PLAN_QUEUE"
+queue = "acuity-plan-sections-proto"
+[[env.proto.queues.consumers]]
+queue = "acuity-plan-sections-proto"
+max_batch_size = 5
+max_retries = 3
+[env.proto.vars]
+PLAN_QUEUE_MODE = "1"

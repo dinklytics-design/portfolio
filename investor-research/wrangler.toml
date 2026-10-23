@@ -1,0 +1,6 @@
+name = "emerging-tech-research"
+compatibility_date = "2026-10-17"
+# Workers Static Assets — serves ./public as a static site. No build step.
+[assets]
+directory = "./public"
+not_found_handling = "single-page-application"

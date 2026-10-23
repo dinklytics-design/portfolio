@@ -1,0 +1,41 @@
+import{useEffect}from"react";import{useForm,Controller}from"react-hook-form";import{zodResolver}from"@hookform/resolvers/zod";import{Grid,TextField,Typography,FormControlLabel,Switch,Stack,MenuItem,Divider,InputAdornment,Box,Chip}from"@mui/material";import{useWizard}from"../../context/WizardContext";import{goalsSchema}from"../../lib/stepSchemas";import type{z}from"zod";
+type F=z.infer<typeof goalsSchema>;
+const RISK=[{value:"conservative",label:"Conservative — preserve capital, minimize volatility"},{value:"moderate",label:"Moderate — balanced growth and stability"},{value:"aggressive",label:"Aggressive — maximize growth, accept volatility"}];
+const TAX_PRIORITY=[{value:"reduce_now",label:"Reduce my taxes today (prefer pre-tax)"},{value:"minimize_retirement",label:"Minimize taxes in retirement (prefer Roth)"},{value:"max_wealth",label:"Maximize long-term after-tax wealth"},{value:"legacy",label:"Build a tax-free legacy for heirs"}];
+export default function GoalsStep({onValidityChange}:{onValidityChange:(v:boolean)=>void}){
+  const{data,updateData}=useWizard();
+  const{control,watch,formState:{isValid}}=useForm<F>({resolver:zodResolver(goalsSchema)as any,mode:"onChange",defaultValues:{riskTolerance:data.goals.riskTolerance??"moderate",taxPriority:data.goals.taxPriority??"reduce_now",hasEmergencyFund:data.goals.hasEmergencyFund??true,hasHighInterestDebt:data.goals.hasHighInterestDebt??false,buyingHome:data.goals.buyingHome,homeTimeframeYears:data.goals.homeTimeframeYears,earlyRetirement:data.goals.earlyRetirement,targetRetirementAge:data.goals.targetRetirementAge,collegeFunding:data.goals.collegeFunding,numberOfChildrenForCollege:data.goals.numberOfChildrenForCollege,estateAndLegacy:data.goals.estateAndLegacy??false,longTermCareConcern:data.goals.longTermCareConcern??false,desiredMonthlyRetirementIncome:data.goals.desiredMonthlyRetirementIncome??0}});
+  const v=watch();
+  useEffect(()=>{
+    onValidityChange(isValid);
+    if(isValid)updateData({goals:{riskTolerance:v.riskTolerance,taxPriority:v.taxPriority,hasEmergencyFund:v.hasEmergencyFund,hasHighInterestDebt:v.hasHighInterestDebt,buyingHome:v.buyingHome,homeTimeframeYears:v.buyingHome?Number(v.homeTimeframeYears):undefined,earlyRetirement:v.earlyRetirement,targetRetirementAge:v.earlyRetirement?Number(v.targetRetirementAge):undefined,collegeFunding:v.collegeFunding,numberOfChildrenForCollege:v.collegeFunding?Number(v.numberOfChildrenForCollege):undefined,estateAndLegacy:v.estateAndLegacy,longTermCareConcern:v.longTermCareConcern,desiredMonthlyRetirementIncome:Number(v.desiredMonthlyRetirementIncome)||undefined}});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[isValid,JSON.stringify(v)]);
+  return(<Grid container spacing={3}>
+    <Grid size={12}><Typography variant="h6">Financial Goals &amp; Priorities</Typography></Grid>
+    <Grid size={12}><Divider><Typography variant="caption" color="text.secondary">Risk &amp; Tax Philosophy — the two most important questions</Typography></Divider></Grid>
+    <Grid size={{xs:12,sm:6}}><Controller name="riskTolerance" control={control} render={({field})=>(<TextField select fullWidth label="Risk Tolerance" helperText="Determines recommended asset allocation mix" {...field}>{RISK.map(o=><MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}</TextField>)}/></Grid>
+    <Grid size={{xs:12,sm:6}}><Controller name="taxPriority" control={control} render={({field})=>(<TextField select fullWidth label="Primary Tax Priority" helperText="Drives Traditional vs. Roth and conversion strategy" {...field}>{TAX_PRIORITY.map(o=><MenuItem key={o.value} value={o.value}>{o.label}</MenuItem>)}</TextField>)}/></Grid>
+    <Grid size={12}><Divider><Typography variant="caption" color="text.secondary">Financial Foundation</Typography></Divider></Grid>
+    <Grid size={{xs:12,sm:6}}><Controller name="hasEmergencyFund" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="I have 3–6 months of expenses in liquid emergency savings"/>)}/></Grid>
+    <Grid size={{xs:12,sm:6}}><Controller name="hasHighInterestDebt" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="I carry high-interest debt &gt;6% (credit cards, personal loans)"/>)}/></Grid>
+    <Grid size={12}><Divider><Typography variant="caption" color="text.secondary">Major Financial Goals</Typography></Divider></Grid>
+    <Grid size={12}><Stack direction="row" spacing={2} sx={{alignItems:"center",flexWrap:"wrap"}}>
+      <Controller name="buyingHome" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="Planning to buy a home"/>)}/>
+      {v.buyingHome&&<Controller name="homeTimeframeYears" control={control} render={({field,fieldState})=>(<TextField type="number" label="Years until purchase" size="small" error={!!fieldState.error} helperText={fieldState.error?.message}{...field}/>)}/>}
+    </Stack></Grid>
+    <Grid size={12}><Stack direction="row" spacing={2} sx={{alignItems:"center",flexWrap:"wrap"}}>
+      <Controller name="earlyRetirement" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="Planning to retire early"/>)}/>
+      {v.earlyRetirement&&<Controller name="targetRetirementAge" control={control} render={({field,fieldState})=>(<TextField type="number" label="Target retirement age" size="small" error={!!fieldState.error} helperText={fieldState.error?.message}{...field}/>)}/>}
+    </Stack></Grid>
+    <Grid size={{xs:12,sm:8}}>
+      <Controller name="desiredMonthlyRetirementIncome" control={control} render={({field})=>{const mo=Number(field.value)||0;return(<Box><TextField type="number" fullWidth label="Desired Monthly Income in Retirement" helperText="Used to calculate your Financial Independence target. Enter 0 to use the 80% income rule of thumb." slotProps={{input:{startAdornment:<InputAdornment position="start">$</InputAdornment>}}}{...field}/>{mo>0&&(<Stack direction="row" spacing={1} sx={{mt:1,flexWrap:"wrap"}}><Chip label={"= $"+(mo*12).toLocaleString()+"/year"} size="small" sx={{bgcolor:"rgba(0,212,138,0.1)",color:"#00d48a",border:"1px solid rgba(0,212,138,0.3)",fontWeight:700}}/><Chip label={"FI Target: $"+(mo*12*25).toLocaleString()} size="small" sx={{bgcolor:"rgba(59,130,246,0.1)",color:"#3b82f6",border:"1px solid rgba(59,130,246,0.3)",fontWeight:700}}/></Stack>)}</Box>);}}/></Grid>
+    <Grid size={12}><Stack direction="row" spacing={2} sx={{alignItems:"center",flexWrap:"wrap"}}>
+      <Controller name="collegeFunding" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="Saving for college funding"/>)}/>
+      {v.collegeFunding&&<Controller name="numberOfChildrenForCollege" control={control} render={({field,fieldState})=>(<TextField type="number" label="Number of children" size="small" error={!!fieldState.error} helperText={fieldState.error?.message}{...field}/>)}/>}
+    </Stack></Grid>
+    <Grid size={12}><Divider><Typography variant="caption" color="text.secondary">Long-Term Planning</Typography></Divider></Grid>
+    <Grid size={{xs:12,sm:6}}><Controller name="estateAndLegacy" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="Leaving a tax-free inheritance is a priority (shapes Roth strategy)"/>)}/></Grid>
+    <Grid size={{xs:12,sm:6}}><Controller name="longTermCareConcern" control={control} render={({field})=>(<FormControlLabel control={<Switch checked={!!field.value} onChange={e=>field.onChange(e.target.checked)}/>} label="Concerned about long-term care costs in retirement"/>)}/></Grid>
+  </Grid>);
+}
